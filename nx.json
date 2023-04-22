@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "npmScope": "init",
+  "npmScope": "keep-note",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/nx-cloud",
@@ -11,7 +11,7 @@
           "test",
           "e2e"
         ],
-        "accessToken": "MzdkNDRjY2EtYTk5OS00NWQyLWE4MjQtZGJhZmZjN2I1ZDA5fHJlYWQtd3JpdGU="
+        "accessToken": "Y2ExN2Y0YzEtM2IzYi00OWE1LWFhNDYtYmU0ZmNmNTBjNDUzfHJlYWQtd3JpdGU="
       }
     }
   },
