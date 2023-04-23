@@ -13,14 +13,14 @@ import { AppModule } from './app/app.module';
 async function bootstrap() {
   // NestJS app
   const app = await NestFactory.create(AppModule);
-  // Swagger
-  setUpSwagger(app);
   // Validation Pipes
   app.useGlobalPipes(new ValidationPipe());
   // Config
   const config = app.get(ConfigService);
   const [ port, prefix ] = [config.get('port'), config.get('prefix')];
   app.setGlobalPrefix(prefix);
+  // Swagger
+  setUpSwagger(app);
   // Run app on port config
   await app.listen(port);
   Logger.log(
