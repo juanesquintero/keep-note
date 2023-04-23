@@ -1,7 +1,15 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "paths": {}
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "outDir": "dist/out-tsc",
+    "sourceMap": true,
+    "target": "es2015"
   },
-  "exclude": ["node_modules", "dist"]
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
