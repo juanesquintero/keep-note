@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+
+  nx-app:
+    image: keepnote-nx-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - DEV_PLATFORM=DOCKER
+    volumes:
+      - .:/usr/code
+      # - /usr/code/node_modules
+      - mono-node-modules:/usr/code/node_modules
+
+  web:
+    container_name: keepnote-web
+    extends:
+      service: nx-app
+    ports:
+      - 4200:4200
+    command: npm run web:docker
+
+  api:
+    container_name: keepnote-api
+    extends:
+      service: nx-app
+    ports:
+      - 3000:3000 # NestJS
+      - 9229:9229 # NodeJS debugger
+      # - 4311:4311 # Server Debugging port
+    command: npm run api:docker
+
+volumes:
+  mono-node-modules: null
