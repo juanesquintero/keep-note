@@ -2,7 +2,13 @@
   "name": "keep-note",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start":  "nx serve api && nx serve web",
+    "start:web":  "nx serve web",
+    "start:api":  "nx serve api",
+    "api:docker":  "npx nx serve api",
+    "web:docker":  "npx nx serve web"
+  },
   "private": true,
   "devDependencies": {
     "@angular-devkit/build-angular": "~15.2.0",
