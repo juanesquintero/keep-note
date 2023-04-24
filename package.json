@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx serve api && nx serve web",
     "start:web": "nx serve web",
     "start:api": "nx serve api",
     "api:docker": "npx nx serve api",
